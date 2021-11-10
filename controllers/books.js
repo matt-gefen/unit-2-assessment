@@ -1,8 +1,9 @@
 import { Book } from "../models/book.js"
 
-function index(req, res) {
+async function index(req, res) {
   try {
-    const books = Book.find({})
+    const books = await Book.find({},)
+    console.log(books)
     res.render('books/index', {
       title: 'Unit 2 Assessment',
       books

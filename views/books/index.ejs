@@ -11,7 +11,11 @@
   <h1>Book List</h1>
   <a href="/books/new">Add a new book</a>
   <% if (books.length) { %>
-    
+    <ul>
+    <% books.forEach(book => {  %> 
+      <li><%= book.title %> - <%=book.read%> </li>
+    <% }) %>
+    </ul>
   <% } else { %>
     <h2>There are no books yet</h2>
   <% } %> 
