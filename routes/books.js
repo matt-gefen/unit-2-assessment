@@ -9,6 +9,7 @@ router.get('/:id/edit', booksCtrl.edit)
 router.post('/', booksCtrl.create)
 router.patch('/:id', booksCtrl.update)
 router.delete('/:id', booksCtrl.delete)
+router.delete('/', booksCtrl.deleteAll)
 
 export {
   router

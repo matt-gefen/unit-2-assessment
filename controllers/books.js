@@ -65,6 +65,15 @@ async function deleteBook(req, res){
     res.redirect('/books')
   }
 }
+async function deleteAll(req, res){
+  try {
+    await Book.remove({})
+    res.redirect('/books')
+  } catch(error) {
+    console.log(error)
+    res.redirect('/books')
+  }
+}
 
 export {
   index,
@@ -72,5 +81,6 @@ export {
   create,
   deleteBook as delete,
   edit,
-  update
+  update,
+  deleteAll
 }

@@ -34,18 +34,29 @@ button {
   font-family: 'Cabin', sans-serif;
 }
 
-#delete {
+.delete {
   background-color: #F8333C;
   border-color: #F8333C;
   color: #F8F0FB;
 }
+
 .nice-button {
   background-color: #6320EE;
   color: #F8F0FB;
   border-color: #6320EE;
 }
+
 #add-new {
   margin-top: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 30px;
+  font-size: 16px;
+}
+
+#delete-all {
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 200px;
   height: 30px;
   font-size: 16px;

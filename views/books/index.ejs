@@ -9,19 +9,22 @@
 </head>
 <body>
   <h1>Book List</h1>
+  <a href="/books/new"><button class='nice-button' id='add-new'>Add a new book</button></a>
   <% if (books.length) { %>
     <ul>
     <% books.forEach(book => {  %> 
       <li><a href='/books/<%=book._id%>/edit'><span id="book-title"><%= book.title %></span></a> : <%= book.read ? "Read" : "Not Read"  %>
         <form action='/books/<%=book._id%>?_method=DELETE' method="post">
-          <button id='delete' type="submit">Delete</button>
+          <button class='delete' type="submit">Delete</button>
         </form>
       </li>
     <% }) %>
     </ul>
+    <form action='/books/?_method=DELETE' method="post">
+      <button class='delete' id='delete-all' type="submit">Delete All Books</button>
+    </form>
   <% } else { %>
     <h2>There are no books yet</h2>
   <% } %> 
-  <a href="/books/new"><button class='nice-button' id='add-new'>Add a new book</button></a>
 </body>
 </html>
