@@ -23,7 +23,18 @@ function newBook(req, res) {
   }
 }
 
+async function create(req, res){
+  try {
+    await Book.create(req.body)
+    res.redirect('/books')
+  } catch(error) {
+    console.log(error)
+    res.redirect('/books')
+  }
+}
+
 export {
   index,
-  newBook as new
+  newBook as new,
+  create
 }
