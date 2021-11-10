@@ -33,9 +33,19 @@ async function create(req, res){
     res.redirect('/books')
   }
 }
+async function deleteBook(req, res){
+  try {
+    await Book.findByIdAndDelete(req.params.id)
+    res.redirect('/books')
+  } catch(error) {
+    console.log(error)
+    res.redirect('/books')
+  }
+}
 
 export {
   index,
   newBook as new,
-  create
+  create,
+  deleteBook as delete
 }
