@@ -1,8 +1,8 @@
-import { Mongoose } from "mongoose"
+import mongoose from "mongoose"
 
-const schema = Mongoose.schema()
+const Schema = mongoose.Schema
 
-const bookSchema = new schema(
+const bookSchema = new Schema(
   {
     title: String,
     read: {
@@ -12,7 +12,7 @@ const bookSchema = new schema(
   }
 )
 
-const Book = Mongoose.model('Book', bookSchema)
+const Book = mongoose.model('Book', bookSchema)
 
 export {
   Book
