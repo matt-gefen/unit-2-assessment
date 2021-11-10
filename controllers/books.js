@@ -12,6 +12,18 @@ function index(req, res) {
   }
 }
 
+function newBook(req, res) {
+  try {
+    res.render('books/new', {
+      title: 'Add a Book'
+    })
+  } catch(error) {
+    console.log(error)
+    res.redirect('/books')
+  }
+}
+
 export {
-  index
+  index,
+  newBook as new
 }
