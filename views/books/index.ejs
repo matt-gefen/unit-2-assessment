@@ -13,6 +13,7 @@
     <ul>
     <% books.forEach(book => {  %> 
       <li><span id="book-title"><%= book.title %></span> : <%= book.read ? "Read" : "Not Read"  %>
+        <a href='/books/<%=book._id%>/edit'><button class='nice-button'>Edit</button></a>
         <form action='/books/<%=book._id%>?_method=DELETE' method="post">
           <button id='delete' type="submit">Delete</button>
         </form>
@@ -22,6 +23,6 @@
   <% } else { %>
     <h2>There are no books yet</h2>
   <% } %> 
-  <a href="/books/new"><button id='add-new'>Add a new book</button></a>
+  <a href="/books/new"><button class='nice-button' id='add-new'>Add a new book</button></a>
 </body>
 </html>

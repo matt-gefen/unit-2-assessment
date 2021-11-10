@@ -39,14 +39,15 @@ button {
   border-color: #F8333C;
   color: #F8F0FB;
 }
-
+.nice-button {
+  background-color: #6320EE;
+  color: #F8F0FB;
+  border-color: #6320EE;
+}
 #add-new {
   margin-top: 20px;
   width: 200px;
   height: 30px;
-  background-color: #6320EE;
-  color: #F8F0FB;
-  border-color: #6320EE;
   font-size: 16px;
 }
 
