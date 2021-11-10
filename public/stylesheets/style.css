@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px;
+  font-family: 'Cabin', sans-serif;
+  background-color: #16E0BD;
+}
+
+h1 {
+  color: #6320EE;
+  font-size: 50px;
 }
 
 a {
-  color: #00B7FF;
+  color: #8075FF;
 }
 
 ul {
@@ -12,7 +21,35 @@ ul {
 }
 
 li {
-  display: flex;
   gap: 10px;
   margin: 5px;
+  font-size: 25px;
+  color: #6320EE;
+}
+form {
+  display: inline-block;
+}
+
+button {
+  font-family: 'Cabin', sans-serif;
+}
+
+#delete {
+  background-color: #F8333C;
+  border-color: #F8333C;
+  color: #F8F0FB;
+}
+
+#add-new {
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  background-color: #6320EE;
+  color: #F8F0FB;
+  border-color: #6320EE;
+  font-size: 16px;
+}
+
+#book-title {
+  font-weight: bold;
 }

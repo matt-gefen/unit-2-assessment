@@ -9,11 +9,10 @@
 </head>
 <body>
   <h1>Book List</h1>
-  <a href="/books/new">Add a new book</a>
   <% if (books.length) { %>
     <ul>
     <% books.forEach(book => {  %> 
-      <li><%= book.title %> - <%=book.read%> 
+      <li><span id="book-title"><%= book.title %></span> : <%= book.read ? "Read" : "Not Read"  %>
         <form action='/books/<%=book._id%>?_method=DELETE' method="post">
           <button id='delete' type="submit">Delete</button>
         </form>
@@ -23,5 +22,6 @@
   <% } else { %>
     <h2>There are no books yet</h2>
   <% } %> 
+  <a href="/books/new"><button id='add-new'>Add a new book</button></a>
 </body>
 </html>
